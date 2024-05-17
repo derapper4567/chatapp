@@ -7,11 +7,11 @@ from transformers import AutoTokenizer
 icons = {"assistant": "./Snowflake_Logomark_blue.png", "user": "⛷️"}
 
 # App title
-st.set_page_config(page_title="Snowflake Arctic")
+st.set_page_config(page_title="Chat with LMSapp")
 
 # Replicate Credentials
 with st.sidebar:
-    st.title('Snowflake Arctic')
+    st.title('Chat with LMSapp')
     if 'REPLICATE_API_TOKEN' in st.secrets:
         #st.success('API token loaded!', icon='✅')
         replicate_api = st.secrets['REPLICATE_API_TOKEN']
@@ -30,7 +30,7 @@ with st.sidebar:
 
 # Store LLM-generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Hi. I'm Arctic, a new, efficient, intelligent, and truly open language model created by Snowflake AI Research. Ask me anything."}]
+    st.session_state.messages = [{"role": "assistant", "content": "Hi. chat in your EASTC  LMSapp, a new, efficient, intelligent, and truly open language model created by Ksasha Academy. Ask me anything."}]
 
 # Display or clear chat messages
 for message in st.session_state.messages:
@@ -38,7 +38,7 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 def clear_chat_history():
-    st.session_state.messages = [{"role": "assistant", "content": "Hi. I'm Arctic, a new, efficient, intelligent, and truly open language model created by Snowflake AI Research. Ask me anything."}]
+    st.session_state.messages = [{"role": "assistant", "content": "Hi. chat in your EASTC  LMSapp, a new, efficient, intelligent, and truly open language model created by Ksasha Academy. Ask me anything."}]
 st.sidebar.button('Clear chat history', on_click=clear_chat_history)
 
 st.sidebar.caption('Built by [Snowflake](https://snowflake.com/) to demonstrate [Snowflake Arctic](https://www.snowflake.com/blog/arctic-open-and-efficient-foundation-language-models-snowflake). App hosted on [Streamlit Community Cloud](https://streamlit.io/cloud). Model hosted by [Replicate](https://replicate.com/snowflake/snowflake-arctic-instruct).')

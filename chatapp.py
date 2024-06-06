@@ -6,7 +6,6 @@ from transformers import AutoTokenizer
 # Set assistant icon to Snowflake logo
 icons = {"assistant": "./Snowflake_Logomark_blue.png", "user": "⛷️"}
 
-# App title
 st.set_page_config(page_title="Chat with LMSapp")
 
 # Replicate Credentials
